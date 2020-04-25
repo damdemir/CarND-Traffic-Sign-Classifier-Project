@@ -120,7 +120,9 @@ Here are the results of the prediction:
 | Speed limit (60km/h)			| Speed limit (60km/h)      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 0.8
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 0.8. 
+It can be seen that the wrong predicted image is already has the worst pixel quality. The background of that image is green and it is also a noise for the neural network. The more clear background provides more accurate result. 
+
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 Below, it can be seen that, 5 test images from web are presented. The top 5 probabilities of each image are calculated by "tf.nn.tok_k". Those probabilities could be seen side of the pre-processed image.
