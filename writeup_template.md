@@ -77,7 +77,7 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Gray Scale image   							| 
 | Convolution 3x3     	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					|												|
+| ReLU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
 | Convolution 3x3	    | 1x1 stride, valid padding, outputs 10x10x6      									|
 | ReLU		|         									|
