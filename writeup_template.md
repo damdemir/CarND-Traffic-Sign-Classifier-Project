@@ -92,10 +92,10 @@ My final model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an epoch 50 and batch size 200 to get the optimal accuracy. I gave the inputs to the LeNet and obtained the logits. Then, I found the probabilities via softmax function and compared them one hot coded.
-To decrase the error means reducing the cross entropy value. I used the Adam optimizer to reduce cross entropy via selection learning rate 0.001. 
+To decrase the error means reducing the cross entropy value. I used the Adam optimizer to reduce cross entropy via selection learning rate 0.005. 
 
 After operation is settled. evaluate function is written to have accuracy of data set. 
-To train whole model is processed by seperating the batches. To obtain the accuracy of whole data set, the average of validation accuracy is calculated for each batch.
+To train whole model is processed by seperating the batches. To obtain the accuracy of whole data set, the average of validation accuracy, training accuracy and testing accuracy are calculated for each epoch. The mean value of validation accuracy is calculated as 0.933, the mean value of training accuracy is calculated as 0.990, The mean value of testing accuracy is calculated as 0.901, 
 
 To be able to use the processed new data set operation is saved and when it is needed it is restored. 
 
@@ -116,11 +116,11 @@ Here are the results of the prediction:
 | Ahead only      		| Ahead only   									| 
 | Bumpy road     			| Bumpy road 										|
 | No entry					| No entry											|
-| Roundabout mandatory      		| Priority road					 				|
+| Roundabout mandatory      		| Speed limit (100km/h)				 				|
 | Speed limit (60km/h)			| Speed limit (60km/h)      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 1.120
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 0.8
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 Below, it can be seen that, 5 test images from web are presented. The top 5 probabilities of each image are calculated by "tf.nn.tok_k". Those probabilities could be seen side of the pre-processed image.
